@@ -7,13 +7,18 @@ export class DataViewContainer extends React.Component {
         minCount: 2,
     }
 
+    onCountSliderChange = (value) => {
+        this.setState({minCount: value})
+    }
 
     render() {
         return (
             <div className="data-view">
                 <ShotChart playerId={this.props.playerId} minCount={this.state.minCount}/>
                 <div className="filters">
-                    <CountSlider />
+                    <CountSlider
+                        minCount={this.state.minCount}
+                        onCountSliderChange={this.onCountSliderChange}/>
                 </div>
             </div>
 

@@ -8,17 +8,18 @@ export class Profile extends React.Component {
             teamCity,
             teamName,
             playerName,
+            playerId,
             height,
             weight,
             pts, reb, ast, pie,
         } = this.props.playerInfo;
         return (
-
             <div className="profile">
                 <div className="profile-entry player-name">{`${playerName}`}</div>
                 <img
                     className="profile-pic"
-                    src={`${PROFILE_PIC_URL_PREFIX}/${this.props.playerId}.png`} alt="Profile"
+                    src={`${PROFILE_PIC_URL_PREFIX}/${playerId}.png`}
+                    alt="Profile"
                 />
                 <div className="profile-entry">
                     <div className="profile-entry-left">Team</div>
