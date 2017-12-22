@@ -6,8 +6,9 @@ export class CountSlider extends React.Component {
         inputValue: 2,
     }
     onChange = (value) => {
+        value = Number(value) || 2;
         this.setState({
-            inputValue: Number(value) || 2,
+            inputValue: value,
         });
         this.props.onCountSliderChange(value);
     }
